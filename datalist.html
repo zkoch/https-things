@@ -1,0 +1,38 @@
+<form>
+  <label>Given Name</label>
+  <input id="address" list="browsers" autocomplete="given-name">
+  <label>Address Line 1</label>
+  <input type="text" autocomplete="address-line1">
+  <label>Address Line 2</label>
+  <input type="text" autocomplete="address-line2">
+</form>
+
+<datalist id="browsers">
+  <option>Bob Pickle</option>
+  <option>Sarah Pickle</option>
+  <option>Kurt Russell</option>
+  <option>Judy McFarland</option>
+</datalist>
+
+<script>
+  (function() {
+    var nonsense = ["alphabet", "apple", "biscuit", "zakery"];
+
+    lookup = function(event) {
+        var el = document.getElementById("address");
+        var tmp = [];
+        for (var i = 0; i < nonsense.length; i++) {
+          if (nonsense[i][0] == el.value) {
+            tmp.push(nonsense[i]);
+          }
+        }
+        for (i = 0; i < tmp.length; i++) {
+          var dl = document.getElementById("browsers");
+          var option = document.createElement('option');
+          option.text = tmp[i];
+          option.value = tmp[i];
+          dl.appendChild(option);
+        }
+    }
+  })();
+</script>
