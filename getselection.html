@@ -1,0 +1,17 @@
+<script>
+    ["mousedown", "keydown"].forEach(function (eventName) {
+        document.addEventListener(eventName, function (e) {
+            //e.preventDefault();
+        }, true);
+    });
+    setInterval(function () {
+        document.getElementById("output").value = window.getSelection().toString();
+    }, 100);
+</script>
+<form>
+<input type="text" id="output">
+<input type="text" autocomplete="cc-number" style="width: 100%"
+       placeholder="click here twice">
+<input type="text" autocomplete="address-line1">
+<input type="text" autocomplete="address-line2">
+</form>
