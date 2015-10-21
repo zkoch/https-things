@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width">
+  <style>
+    #pay {
+      margin: 2em;
+    }
+
+    #enableGeo {
+      display: none;
+    }
+
+    font {
+      font-family: 'Open Sans';
+    }
+
+    label {
+      display: block;
+    }
+
+    .form-group {
+      display: block;
+    }
+
+    .jumbotron {
+      background-color: #1E88E5;
+      color: #fefefe;
+      font-family: 'Open Sans';
+      box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    button.btn-primary {
+      border-radius: 2px;
+      background-color: #0f9d58;
+      color: white;
+      font-family: 'Open Sans';
+      border: none;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+  </style>
+</head>
+<body>
+  <div class="jumbotron">
+  <h1>Complete your hotel booking</h1>
+  <p>November 1st - 7th, 2015</p>
+</div>
+  <div id="pay">
+
+  <form class="form-inline" action="https://example.com">
+
+
+
+    <fieldset>
+        <legend>Contact Info</legend>
+      <div class="form-group">
+        <label for="frmNameA">Name</label>
+        <input name="name" id="frmNameA" placeholder="Full name" required="" autocomplete="name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="frmEmailA">Email</label>
+        <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required="" autocomplete="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="frmEmailC">Confirm Email</label>
+        <input type="email" name="emailC" id="frmEmailC" placeholder="name@example.com" required="" autocomplete="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="frmPhoneNumA">Phone</label>
+        <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-650-450-1212" required="" autocomplete="tel" class="form-control">
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+              <legend>Billing</legend>
+      <div class="form-group">
+              <label for="frmAddressS">Address</label>
+              <input name="ship-address" required="" id="frmAddressS" placeholder="123 Any Street" autocomplete="billing street-address" class="form-control">
+      </div>
+      <div class="form-group">
+              <label for="frmCityS">City</label>
+              <input name="ship-city" required="" id="frmCityS" placeholder="New York" autocomplete="billing locality" class="form-control">
+      </div>
+      <div class="form-group">
+              <label for="frmStateS">State</label>
+              <input name="ship-state" required="" id="frmStateS" placeholder="NY" autocomplete="billing region" class="form-control">
+      </div>
+      <div class="form-group">
+              <label for="frmZipS">Zip</label>
+              <input name="ship-zip" required="" id="frmZipS" placeholder="10011" autocomplete="billing postal-code" class="form-control">
+      </div>
+      <div class="form-group">
+              <label for="frmCountryS">Country</label>
+              <input name="ship-country" required="" id="frmCountryS" placeholder="USA" autocomplete="billing country" class="form-control">
+      </div>
+
+            </fieldset>
+
+    <fieldset>
+        <legend>Payment</legend>
+        <p>
+          This is a demo. Do <b>NOT</b>
+          provide real credit card information in this field.
+        </p>
+      <div class="form-group">
+
+        <label for="frmNameCC">Name on card</label>
+        <input name="ccname" id="frmNameCC" required="" placeholder="Full Name" autocomplete="cc-name" class="form-control">
+      </div>
+        <div class="form-group">
+        <label for="frmCCNum">Card Number</label>
+        <input name="cardnumber" id="frmCCNum" required="" autocomplete="cc-number" class="form-control">
+        </div>
+          <div class="form-group">
+        <label for="frmCCCVC">CVC</label>
+        <input name="cvc" id="frmCCCVC" required="" autocomplete="cc-csc" class="form-control">
+          </div>
+            <div class="form-group">
+        <label for="frmCCExp">Expiry</label>
+        <input name="cc-exp" id="frmCCExp" required="" placeholder="MM-YYYY" autocomplete="cc-exp" class="form-control">
+            </div>
+      </fieldset>
+
+  <button type="submit" class="btn btn-primary">Confirm booking</button>
+</form>
+  </div>
+
+</body>
+</html>
