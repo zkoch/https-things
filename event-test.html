@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      window.onload = function() {
+        var el = document.getElementById('a');
+        var actions = document.getElementById('actions')
+        var events = 'focus blur keydown keyup change'.split(' ');
+
+        for (var i = 0; i < events.length; i++) {
+          el.addEventListener(events[i], function(e) {
+            var eTypeNode = document.createTextNode(e.type);
+            actions.appendChild(eTypeNode);
+            actions.appendChild(document.createElement('br'));
+          })
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" id="a" />
+    <div id="actions"></div>
+  </body>
+</html>
