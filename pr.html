@@ -78,6 +78,9 @@
       element.className = "info";
     }
     function onBuyClicked() {
+      if (!window.PaymentRequest) {
+        error("no paymentrequest, toobadsosad");
+      }
       var methods = ["//android.com/pay", "visa", "mastercard", "amex", "discover"];
       var request = {
         "items": [
