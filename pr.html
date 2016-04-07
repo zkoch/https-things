@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PaymentRequest</title>
+  <style>
+    body {
+      overflow: hidden;
+    }
+    div {
+      margin-top: 10px;
+    }
+    .error {
+      animation-duration: 0.5s;
+      animation-name: popup;
+      color: red;
+    }
+    @keyframes popup {
+      from {
+        margin-top: 20px;
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    .error-hide {
+      animation-duration: 0.5s;
+      animation-name: popdown;
+      color: red;
+    }
+    @keyframes popdown {
+      to {
+        margin-top: 20px;
+        opacity: 0;
+      }
+    }
+    .info {
+      color: green;
+    }
+    .fork {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div><em><a href="https://goo.gl/6Dd02u">PaymentRequest</a></em></div>
+  <div>Cost: <strong>$55.00</strong></div>
+  <div><button onClick="onBuyClicked()">Buy</button></div>
+  <div id="msg"></div>
+  <script>
+    var timeoutID1, timeoutID2;
+    function error(msg) {
+      if (timeoutID1) {
+        window.clearTimeout(timeoutID1);
+      }
+      if (timeoutID2) {
+        window.clearTimeout(timeoutID2);
+      }
+      var element = document.getElementById("msg");
+      element.innerHTML = msg;
+      element.className = "error";
+      timeoutID1 = window.setTimeout(function() {
+        element.className = "error-hide";
+        timeoutID2 = window.setTimeout(function() {
+          element.innerHTML = "";
+          element.className = "";
+        }, 500);
+      }, 10000);
+    }
+    function info(msg) {
+      var element = document.getElementById("msg");
+      element.innerHTML = msg;
+      element.className = "info";
+    }
+    function onBuyClicked() {
+      var methods = ["//android.com/pay", "visa", "mastercard", "amex", "discover"];
+      var request = {
+        "items": [
+          {
+            "id": "basket",
+            "label": "Sub-total",
+            "amount": {
+              "currencyCode": "USD",
+              "value": "55.00"
+            }
+          },
+          {
+            "id": "tax",
+            "label": "Sales tax",
+            "amount": {
+              "currencyCode": "USD",
+              "value": "5.00"
+            }
+          },
+          {
+            "id": "total",
+            "label": "Total due",
+            "amount": {
+              "currencyCode": "USD",
+              "value": "60.00" // This amount is always total shown
+            }
+          }
+        ],
+        shippingOptions: [
+          {
+            "id": "free",
+            "label": "Free Shipping!",
+            "amount": {
+              "currencyCode": "USD",
+              "value": "0.00"
+            }
+          }
+        ]
+      }; 
+      var options = {
+        requestShipping: true
+      };
+      var methodData = {
+        "//android.com/pay": {
+          "gateway": "stripe",
+          "stripe:publishableKey": "pk_test_VKUbaXb3LHE7GdxyOBMNwXqa",
+          "stripe:version": "2015-10-16 (latest)"
+        }
+      };
+
+      var pr = new PaymentRequest(methods, request, options, methodData);
+
+      pr.show().then(function(paymentResponse) {
+        console.log(paymentResponse);
+        paymentResponse.complete(true);
+      }).catch(function(err) {
+        console.log("I am sad", err.message);
+      });
+      /*
+      promise.then(function(instrumentResponse) {
+        if (instrumentResponse && instrumentResponse.instrumentName === 'Android Pay') {
+          var payload = JSON.parse(instrumentResponse.instrumentDetails);
+          payload.amount = 5500;
+          $.ajax({
+            type: 'POST',
+            url: '/charge',
+            contentType: 'application/json',
+            data: JSON.stringify(payload),
+            success: function() {
+              info('Transaction Successful');
+            },
+            error: function() {
+              error('Somthing went wrong :(');
+            }
+          });
+        } else {
+          info("hurray, valid response from \"" +
+          instrumentResponse.instrumentName +
+          "\": " +
+          instrumentResponse.instrumentDetails); 
+        }
+      }).catch(function(err) {
+          // Typically no available payment instruments or error on instrument side
+          error("Uh oh, something bad happened: " + err.message);
+      });
+      */
+    }
+  </script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</body>
+</html>
