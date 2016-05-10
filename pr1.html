@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Society in Support of Venerable Rouslan Solomakhin</title>
-  <link rel="icon" href="/favicon.ico">
+  <title>Shopify POS - Checkout</title>
+  <link rel="shortcut icon" type="image/x-icon" href="//cdn.shopify.com/shopify-marketing_assets/static/shopify-favicon.png" />
+  <link rel="canonical" href="https://www.shopify.com/favicon">
+  <meta property="og:url" content="https://www.shopify.com/favicon" />
   <style>
     body {
       overflow: hidden;
@@ -127,27 +129,31 @@
         "jcb",
         "unionpay",
         "bitcoin",
-        "bobpay.xyz"
+        "https://bobpay.xyz/pay"
       ];
 
       var details = {
         "items": [{
           "id": "original",
-          "label": "Original donation amount",
-          "amount": {"currencyCode": currency, "value": amount}
+          "label": "13\" Cash Drawer",
+          "amount": {"currencyCode": currency, "value": "139.00"}
         }, {
           "id": "discount",
-          "label": "Friends and family discount",
-          "amount": {"currencyCode": currency, "value": discount}
+          "label": "Taxes",
+          "amount": {"currencyCode": currency, "value": "10.43"}
         }, {
           "id": "total",
-          "label": "Donation",
-          "amount": {"currencyCode": currency, "value": total}
+          "label": "Shipping",
+          "amount": {"currencyCode": currency, "value": "0.00"}
+        }, {
+          "id": "total",
+          "label": "Total",
+          "amount": {"currencyCode": currency, "value": "149.43"}
         }],
         "shippingOptions": [{
-          "id": "standardShipping",
-          "label": "Standard shipping",
-          "amount": {"currencyCode": currency, "value": "5.00"}
+          "id": "freeShipping",
+          "label": "Free shipping",
+          "amount": {"currencyCode": currency, "value": "0.00"}
         }]
       };
 
