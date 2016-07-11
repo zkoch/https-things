@@ -1,0 +1,281 @@
+<form accept-charset="UTF-8" action="/voice_menus/VOM93F974B7707B2467359A0DF6B4D339F1C6984DD17109D6A1" class="edit_voice_menu" data-id="VOM93F974B7707B2467359A0DF6B4D339F1C6984DD17109D6A1" data-new="false" id="voice_menu" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="HEuLRGu/kCLTqZlhMhW/xSwWoYhHVwBGLu1hTVOmgR8="></div>
+        <div class="field" id="menu-setup">
+          <h3>Menu Setup</h3>
+          <div class="card">
+            <div class="field textfield"><label for="voice_menu_name">Menu Name</label><input class="text string" id="voice_menu_name" name="voice_menu[name]" size="30" type="text" value="Collect tag Input"><div class="clear-break"></div></div>
+            <div class="field textfield"><label for="voice_menu_play_message">Voice Prompt</label><div class="say_upload"><div class="audio-player" style="display: none;"><span class="audio-name"><span class="say_upload_file">Recorded Audio</span> <a class="edit-audio" title="" data-original-title="Remove this message"><i class="font-close" style="font-size:70%"></i></a></span><audio></audio></div><input class="text audio-input" id="voice_menu_play_message" placeholder="Press 1 for sales. Press 2 for support." size="62" type="text" value="say:alice:en-US:"><input type="hidden" name="voice_menu[play_message]" class="text hidden" value="say:alice:en-US:"><a href="#" title="" class="upload" data-original-title="Upload an audio file"><i class="font-cloud-upload"></i></a><a href="#" title="" class="listen" data-original-title="Listen to this message"><i class="font-play"></i></a><a href="#" title="" class="record" data-original-title="Record your own audio"><i class="font-mic"></i></a><a href="#" title="" class="remove" style="visibility: hidden;" data-original-title="Remove this message"><i class="font-close"></i></a><div class="progress-indicator"></div><div class="settings-panel"><div class="row"><div class="col-md-12"><span class="hidden-xs">Text to Speech Voice: </span><select name="voice" style="max-width:42%"><option value="man">Generic Man</option><option value="woman">Generic Woman</option><option value="alice" selected="">Awesome Alice</option></select>  <span style="display:inline-block;max-width:56%"><span class="hidden-xs">Language: </span><select name="lang" style="max-width:100%"><option value="da-DK">Danish, Denmark</option><option value="de-DE">German, Germany</option><option value="en-AU">English, Australia</option><option value="en-CA">English, Canada</option><option value="en-GB">English, UK</option><option value="en-IN">English, India</option><option value="en-US">English, United States</option><option value="ca-ES">Catalan, Spain</option><option value="es-ES">Spanish, Spain</option><option value="es-MX">Spanish, Mexico</option><option value="fi-FI">Finnish, Finland</option><option value="fr-CA">French, Canada</option><option value="fr-FR">French, France</option><option value="it-IT">Italian, Italy</option><option value="ja-JP">Japanese, Japan</option><option value="ko-KR">Korean, Korea</option><option value="nb-NO">Norwegian, Norway</option><option value="nl-NL">Dutch, Netherlands</option><option value="pl-PL">Polish-Poland</option><option value="pt-BR">Portuguese, Brazil</option><option value="pt-PT">Portuguese, Portugal</option><option value="ru-RU">Russian, Russia</option><option value="sv-SE">Swedish, Sweden</option><option value="zh-CN">Chinese, PRC</option><option value="zh-HK">Chinese, Hong Kong</option><option value="zh-TW">Chinese, Taiwan</option></select></span></div></div></div></div><div class="clear-break"></div></div>
+            <footer>
+              <button class="button callout save-button"><div class="indicator-loop"><i class="save"></i></div><span>Save Changes</span></button>
+              <a id="copy-voice-menu-action" href="#" class="button">Duplicate</a>
+              <a id="quick-voicemail" href="#" title="" class="button pull-right" style="display:none" data-original-title="Automatically configure your voice menu as a voicemail box">Quick Voicemail Setup</a>
+              <a href="/voice_menus/VOM93F974B7707B2467359A0DF6B4D339F1C6984DD17109D6A1/delete" id="delete-voice-menu-action" class="button activebutton pull-right">Delete Voice Menu...</a>
+              <div class="clear"></div>
+            </footer>
+          </div>
+        </div>
+        <div class="field active" id="menu-input-handling">
+          <h3>Input Handling <small>How long to wait and how many digits to collect and what to do on error input</small></h3>
+          <div class="card">
+            <div class="field textfield"><label for="voice_menu_default_number_id">Input Error Handling</label><div class="select2-container text string" id="s2id_voice_menu_default_number_id" style="min-width: 150px; width: 100%; max-width: 400px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-1">Hang up/Default Menu</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen">Input Error Handling</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen1_search" class="select2-offscreen">Input Error Handling</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-1">   </ul></div></div><input class="text string" id="voice_menu_default_number_id" name="voice_menu[default_number_id]" size="30" type="text" style="min-width: 150px; width: 100%; max-width: 400px; display: none;" tabindex="-1" title="Input Error Handling"><span class="hint">&nbsp;When the caller does not make a valid entry, even after a repeat of the menu options.</span><div class="clear-break"></div></div>
+            <div class="field textfield"><label for="voice_menu_input_maxkeys">Maximum user input (keypad digits)</label><input class="text string" id="voice_menu_input_maxkeys" min="0" name="voice_menu[input_maxkeys]" size="30" style="width:80px" type="number" value="1"><cite>&nbsp;digits</cite><span class="hint">&nbsp;The maximum number of digits pressed per menu item below (leave blank for unlimited).<br>e.g. 1 is a good default when you are asking callers to enter 1 or 2 as the key pad value because they will not need to press # or wait for the timeout value.</span><div class="clear-break"></div></div>
+            <div class="field textfield"><label for="voice_menu_input_timeout">Seconds to wait for caller input</label><input class="text string" id="voice_menu_input_timeout" min="0" name="voice_menu[input_timeout]" size="30" style="width:80px" type="number" value="0"><cite>&nbsp;seconds</cite><div class="clear-break"></div></div>
+            <div class="field textfield"><label for="voice_menu_prompt_retries">How many times should we reprompt the caller before giving up?</label><input class="text string" id="voice_menu_prompt_retries" min="0" name="voice_menu[prompt_retries]" size="30" style="width:80px" type="number" value="0"><cite>&nbsp;times</cite><div class="clear-break"></div></div>
+            <footer><button class="button callout save-button"><div class="indicator-loop"><i class="save"></i></div><span>Save Changes</span></button></footer>
+          </div>
+        </div>
+        <div class="field" id="menu-scheduling">
+          <h3>Schedule Routing <small>Route the caller to an alternate path given the time of day</small></h3>
+          <div class="card">
+          <div class="field textfield"><label for="voice_menu_schedule_id">Schedule</label><div class="select2-container chzn-select" id="s2id_voice_menu_schedule_id" style="min-width: 150px; width: 100%; max-width: 400px;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">Always On</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen">Schedule</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen">Schedule</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><input class="chzn-select" id="voice_menu_schedule_id" name="voice_menu[schedule_id]" size="30" type="text" style="min-width: 150px; width: 100%; max-width: 400px; display: none;" tabindex="-1" title="Schedule"><span class="hint">&nbsp;When should calls be routed through this voice menu?</span><div class="clear-break"></div></div>
+          
+          <div id="schedule-options" style="display: none;">
+            <div class="field select"><label for="voice_menu_after_hours_action_label">Default after hours</label><div class="select2-container" id="s2id_voice_menu_after_hours_action_label" style="min-width: 150px; width: 100%; max-width: 400px;"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-3">Voice Menu</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen">Default after hours</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen3_search" class="select2-offscreen">Default after hours</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-3">   </ul></div></div><select class="" id="voice_menu_after_hours_action_label" name="voice_menu[after_hours_action_label]" style="min-width: 150px; width: 100%; max-width: 400px; display: none;" tabindex="-1" title="Default after hours"><option value="">Hang up</option>
+<option value="voice_menu" selected="selected">Voice Menu</option>
+<option value="receiving_number">Dial Number</option>
+<option value="call_queue">Use Queue</option></select><div class="clear-break"></div></div>
+            <input id="voice_menu_after_hours_action_id" name="voice_menu[after_hours_action_id]" type="hidden" value="1530">
+            <input id="voice_menu_after_hours_action_type" name="voice_menu[after_hours_action_type]" type="hidden" value="VoiceMenu">
+            <div id="schedule-setup" class="well"><div class="select2-container selector standard-width" id="s2id_autogen4"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-5">Pixel Menu</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen5" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-5" id="s2id_autogen5"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen5_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-5" id="s2id_autogen5_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-5">   </ul></div></div><input type="text" class="selector standard-width" name="setting[]" value="1530" tabindex="-1" title="" style="display: none;"> <a target="_blank" href="/voice_menus/1530/edit" class="edit-url">edit</a></div>
+          </div>
+          <footer>
+          <button class="button callout save-button"><div class="indicator-loop"><i class="save"></i></div><span>Save Changes</span></button>
+          <a class="button" target="_blank" href="/schedules">Manage Schedules</a>
+          </footer>
+          </div>
+        </div>
+        <div class="field">
+          <h3 class="field" id="menu-options">Menu Options <small>add options to control where the caller should be directed based on the keypad keys they press
+              <a id="add-voice-menu" href="#add" class="button callout pull-right" style="font-size:13px"><i class="font-plus"></i> Add Menu Option</a><div class="clear"></div>
+            </small>
+          </h3>
+          <div class="card" id="no-voice-menu-items" style="display:none"><p>Click the "Add Menu Option" button above to get started.</p></div>
+          <div id="voice-menu-items" data-id="VOM93F974B7707B2467359A0DF6B4D339F1C6984DD17109D6A1" data-transcription-cost="5.25"><div class="field vmi" id="menu-item-0"><div class="card"> 
+  <header>
+    <input id="voice_menu_item_unique_id" name="unique_id" type="hidden" value="0">
+    <input id="voice_menu_item_id_0" name="item[id]" type="hidden" value="VMI93F974B7707B246712BF010BB9EA0A87465BFB75146FB47A8319ED487469543A">
+    
+    <div class="vmi-col-keypress">
+      <div class="field textfield">
+        <i class="font-grid4" title="" data-original-title="The DTMF code e.g. digit pressed on the callers keypad to trigger the following action"></i>
+        <input class="span1 text input-keypress" id="voice_menu_item_keypress_0" name="item[keypress]" size="3" style="width:calc(100% - 20px)" type="text" value="1">
+        <div class="clear-break"></div>
+      </div>
+    </div>
+
+    <div class="vmi-col-action">
+      <div class="select2-container voice-action-select" id="s2id_voice_menu_item_voice_action_type_0" style="width:calc(100% - 20px)"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-6">Collect Input</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen6" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-6" id="s2id_autogen6"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen6_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-6" id="s2id_autogen6_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-6">   </ul></div></div><select class="voice-action-select" id="voice_menu_item_voice_action_type_0" name="item[voice_action_type]" style="width: calc(100% - 20px); display: none;" tabindex="-1" title="">
+          <option value="dial">Dial Number</option>
+          <option value="configured">Existing Config</option>
+          <option value="menu">Use Voice Menu</option>
+          <option value="sms">Send Text Message</option>
+          <option value="collect_input" selected="">Collect Input</option>
+          <option value="fire_pixel">Fire Pixel</option>
+          <option value="call_agent">Call Agent</option>
+          <option value="message">Leave Message</option>
+          <option value="hangup">Hang Up</option>
+          <option value="call_queue">Call Queue</option>
+          <option value="geo">Geo Route Caller</option>
+          <option value="conditional_router">Smart Router</option>
+          <option value="dialer">Dialer</option>
+      </select>
+      <i class="font-question" title="" data-original-title="How to route the call after either keypress or this action is taken."></i>
+    </div>
+
+    <div class="vmi-col-default">
+      <span style="padding-right:5px">Default</span>
+      <div class="default-menu-item boot-switch" style="display:inline-block">
+        <input type="hidden" name="item[default_action]" id="voice_menu_item_default_action_default_action_0" value="1">
+        <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-animate" style="width: 94px;"><div class="bootstrap-switch-container" style="width: 138px; margin-left: 0px;"><span class="bootstrap-switch-handle-on bootstrap-switch-success" style="width: 46px;">Yes</span><span class="bootstrap-switch-label" style="width: 46px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 46px;">No</span><input data-on-text="Yes" data-off-text="No" data-on-color="success" type="checkbox" checked=""></div></div>
+        <i class="font-question" title="" data-original-title="Default menu option will be trigger if no other option is selected or an invalid option is selected."></i>
+      </div>
+    </div>
+    
+    <div class="clear"></div>
+  </header>
+  <div class="menu-action action-collect_input">
+    <div class="field">
+      <label for="collect-play-0">Prompt the caller for some input <i class="font-help" title="" data-original-title="A prompt to request some key presses from the caller - this will be collected and stored as a menu keypress in the call log"></i></label>
+      <div class="say_upload"><div class="audio-player" style="display: none;"><span class="audio-name"><span class="say_upload_file">Recorded Audio</span> <a class="edit-audio" title="" data-original-title="Remove this message"><i class="font-close" style="font-size:70%"></i></a></span><audio></audio></div><input class="text audio-input" id="collect-play-0" placeholder="Prompt for caller input e.g. please enter your number." value="say:alice:en-US:" size="70" type="text"><input type="hidden" name="item[play_message]" class="text hidden" value="say:alice:en-US:"><a href="#" title="" class="upload" data-original-title="Upload an audio file"><i class="font-cloud-upload"></i></a><a href="#" title="" class="listen" data-original-title="Listen to this message"><i class="font-play"></i></a><a href="#" title="" class="record" data-original-title="Record your own audio"><i class="font-mic"></i></a><a href="#" title="" class="remove" style="visibility: hidden;" data-original-title="Remove this message"><i class="font-close"></i></a><div class="progress-indicator"></div><div class="settings-panel"><div class="row"><div class="col-md-12"><span class="hidden-xs">Text to Speech Voice: </span><select name="voice" style="max-width:42%"><option value="man">Generic Man</option><option value="woman">Generic Woman</option><option value="alice" selected="">Awesome Alice</option></select>  <span style="display:inline-block;max-width:56%"><span class="hidden-xs">Language: </span><select name="lang" style="max-width:100%"><option value="da-DK">Danish, Denmark</option><option value="de-DE">German, Germany</option><option value="en-AU">English, Australia</option><option value="en-CA">English, Canada</option><option value="en-GB">English, UK</option><option value="en-IN">English, India</option><option value="en-US">English, United States</option><option value="ca-ES">Catalan, Spain</option><option value="es-ES">Spanish, Spain</option><option value="es-MX">Spanish, Mexico</option><option value="fi-FI">Finnish, Finland</option><option value="fr-CA">French, Canada</option><option value="fr-FR">French, France</option><option value="it-IT">Italian, Italy</option><option value="ja-JP">Japanese, Japan</option><option value="ko-KR">Korean, Korea</option><option value="nb-NO">Norwegian, Norway</option><option value="nl-NL">Dutch, Netherlands</option><option value="pl-PL">Polish-Poland</option><option value="pt-BR">Portuguese, Brazil</option><option value="pt-PT">Portuguese, Portugal</option><option value="ru-RU">Russian, Russia</option><option value="sv-SE">Swedish, Sweden</option><option value="zh-CN">Chinese, PRC</option><option value="zh-HK">Chinese, Hong Kong</option><option value="zh-TW">Chinese, Taiwan</option></select></span></div></div></div></div>
+    </div>
+    <div class="field">
+      <label for="voice_menu_item_capture_request_url_0">Send Key Press to Remote Server <i class="font-help" title="" data-original-title="After we collect the caller keypress we can send the input to your server. Where it can:  Read a text response and either continue to a given menu keypress or hangup if none is provided."></i></label>
+      <input class="text" id="voice_menu_item_capture_request_url_0" name="item[capture_request_url]" placeholder="https://your-server.example.com/" size="30" style="width:100%" type="text" value="http://localhost:4567/check">
+      <p class="hint">&nbsp;Optionally, send an HTTP POST request to your server. 
+                         Your server can response with a message to play to the caller in
+                         the HTTP response body.</p>
+      <p>We will send your web server a URL encoded form post with the following parameters.</p>
+      <h4>Request <small>content type application/x-www-form-urlencoded</small></h4>
+      <table class="table">
+        <tbody><tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>caller_number</td>
+          <td>The incoming phone caller number.</td>
+        </tr>
+        <tr>
+          <td>called_number</td>
+          <td>The tracking number that was dialed.</td>
+        </tr>
+        <tr>
+          <td>call_id</td> 
+          <td>The unique identifier for the incoming phone call.</td>
+        </tr>
+        <tr>
+          <td>input</td>
+          <td>Any input captured from the DTMF codes from the incoming phone caller.</td>
+        </tr>
+      </tbody></table>
+      <p>Your web server can respond with some control logic as well as conditionally tag a phone call.</p>
+      <p>The response from your web server should be a JSON object that contains a few controlling keys.</p>
+      <h4>Response <small>content type application/json</small></h4>
+      <table class="table">
+        <tbody><tr>
+          <th>Key</th>
+          <th>Definition</th>
+        </tr>
+        <tr>
+          <td><strong>say</strong></td>
+          <td>Respond with a custom message.</td>
+        </tr>
+        <tr>
+          <td><strong>next_key</strong></td>
+          <td>An integer key press value indicating the next menu key press to redirect the caller too.</td>
+        </tr>
+        <tr>
+          <td><strong>tag</strong></td>
+          <td>Tag the call with the given tag.</td>
+        </tr>
+      </tbody></table>
+      <p>An example response to conditionally route a call to a different menu option is below with the next_key option</p>
+      <pre>{"next_key":2}</pre>
+      <p>You may also add a custom message before routing to another menu item.</p>
+      <pre>{"say":"Thank you for calling","next_key":2}</pre>
+      <p>You can also tag the call dynamically from your servers.</p>
+      <pre>{"tag":"SalesLead","next_key":2}</pre>
+
+
+      
+    </div>
+
+    <div class="field boot-switch">
+      <label for="voice_menu_item_capture_keypress_0">Whether to record the user's key press. For PCI or HIPAA compliance you should turn this feature OFF.</label>
+      <input type="hidden" name="item[capture_keypress]" id="voice_menu_item_capture_keypress_0" value="0">
+      <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off bootstrap-switch-animate" style="width: 100px;"><div class="bootstrap-switch-container" style="width: 147px; margin-left: -49px;"><span class="bootstrap-switch-handle-on bootstrap-switch-success" style="width: 49px;">ON</span><span class="bootstrap-switch-label" style="width: 49px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 49px;">OFF</span><input data-on-color="success" type="checkbox"></div></div>
+    </div>
+
+    <div class="field boot-switch">
+      <label for="voice_menu_item_play_beep_0">Turn this on to have this action immediately send your server a request. e.g. don't wait for any input</label>
+      <input type="hidden" name="item[play_beep]" id="voice_menu_item_play_beep_0" value="1">
+      <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-animate" style="width: 100px;"><div class="bootstrap-switch-container" style="width: 147px; margin-left: 0px;"><span class="bootstrap-switch-handle-on bootstrap-switch-success" style="width: 49px;">ON</span><span class="bootstrap-switch-label" style="width: 49px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 49px;">OFF</span><input data-on-color="success" type="checkbox" checked=""></div></div>
+    </div>
+
+
+    <div class="field">
+      <label for="voice_menu_item_voice_menu_items_0">Continue with menu item matching keypress: <i class="font-help" title="" data-original-title="The menu keypress to use after sending the text message. Leaving this blank will trigger a hangup."></i></label>
+      <input class="text" id="voice_menu_item_voice_menu_items_0" name="item[forward_to_keypress]" size="6" type="text" value="">
+    </div>
+  </div>
+  <div style="margin:0;border-top:solid 1px #E0E0E0;max-width:100%;padding-top:10px">
+      <div class="col-sm-7">
+        <div class="field" style="margin-bottom:0">
+          <label>Tag this call <i class="font-help" title="" data-original-title="When the caller enters the given keypress, apply this tag to the call in the call log"></i></label>
+          <div class="select2-container select2-container-multi chzn-select tag_call" id="s2id_voice_menu_item_tag_id_0" style="width:100%"><ul class="select2-choices">  <li class="select2-search-field">    <label for="s2id_autogen7" class="select2-offscreen"></label>    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input select2-default" id="s2id_autogen7" placeholder="" style="width: 629px;">  </li></ul><div class="select2-drop select2-drop-multi select2-display-none">   <ul class="select2-results">   </ul></div></div><input class="chzn-select tag_call" id="voice_menu_item_tag_id_0" name="item[tag_id]" size="30" style="width: 100%; display: none;" type="text" value="" tabindex="-1">
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="field" style="margin-bottom:0">
+          <label>Assign agent to call <i class="font-help" title="" data-original-title="When the caller enters the given keypress, assign this call to the selected agent"></i></label>
+          <div class="select2-container agent_assign_id" id="s2id_voice_menu_item_assign_agent_id_0" style="width:100%"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-8">Select an agent</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen8" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-8" id="s2id_autogen8"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen8_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-8" id="s2id_autogen8_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-8">   </ul></div></div><input class="agent_assign_id" id="voice_menu_item_assign_agent_id_0" name="item[assign_agent_id]" size="30" style="width: 100%; display: none;" type="text" value="" tabindex="-1" title="">
+        </div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <footer>
+    <button class="button save-button callout"><div class="indicator-loop"><i class="save"></i></div><span>Save Changes</span></button>
+    <a class="delete-vmi pull-right" href="#remove" data-tag="0" data-vmi="VMI93F974B7707B246712BF010BB9EA0A87465BFB75146FB47A8319ED487469543A"><i class="font-trash"></i></a>
+    <div class="clear"></div>
+  </footer>
+</div>
+</div><div class="field vmi" id="menu-item-1"><div class="card">
+  <header>
+    <input id="voice_menu_item_unique_id" name="unique_id" type="hidden" value="1">
+    <input id="voice_menu_item_id_1" name="item[id]" type="hidden" value="VMI93F974B7707B246712BF010BB9EA0A87D1CCE992DD22C8C82AE8DC455687AD60">
+    
+    <div class="vmi-col-keypress">
+      <div class="field textfield">
+        <i class="font-grid4" title="" data-original-title="The DTMF code e.g. digit pressed on the callers keypad to trigger the following action"></i>
+        <input class="span1 text input-keypress" id="voice_menu_item_keypress_1" name="item[keypress]" size="3" style="width:calc(100% - 20px)" type="text" value="2">
+        <div class="clear-break"></div>
+      </div>
+    </div>
+
+    <div class="vmi-col-action">
+      <div class="select2-container voice-action-select" id="s2id_voice_menu_item_voice_action_type_1" style="width:calc(100% - 20px)"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-9">Smart Router</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen9" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-9" id="s2id_autogen9"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen9_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-9" id="s2id_autogen9_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-9">   </ul></div></div><select class="voice-action-select" id="voice_menu_item_voice_action_type_1" name="item[voice_action_type]" style="width: calc(100% - 20px); display: none;" tabindex="-1" title="">
+          <option value="dial">Dial Number</option>
+          <option value="configured">Existing Config</option>
+          <option value="menu">Use Voice Menu</option>
+          <option value="sms">Send Text Message</option>
+          <option value="collect_input">Collect Input</option>
+          <option value="fire_pixel">Fire Pixel</option>
+          <option value="call_agent">Call Agent</option>
+          <option value="message">Leave Message</option>
+          <option value="hangup">Hang Up</option>
+          <option value="call_queue">Call Queue</option>
+          <option value="geo">Geo Route Caller</option>
+          <option value="conditional_router" selected="">Smart Router</option>
+          <option value="dialer">Dialer</option>
+      </select>
+      <i class="font-question" title="" data-original-title="How to route the call after either keypress or this action is taken."></i>
+    </div>
+
+    <div class="vmi-col-default">
+      <span style="padding-right:5px">Default</span>
+      <div class="default-menu-item boot-switch" style="display:inline-block">
+        <input type="hidden" name="item[default_action]" id="voice_menu_item_default_action_default_action_1" value="0">
+        <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off bootstrap-switch-animate" style="width: 94px;"><div class="bootstrap-switch-container" style="width: 138px; margin-left: -46px;"><span class="bootstrap-switch-handle-on bootstrap-switch-success" style="width: 46px;">Yes</span><span class="bootstrap-switch-label" style="width: 46px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 46px;">No</span><input data-on-text="Yes" data-off-text="No" data-on-color="success" type="checkbox"></div></div>
+        <i class="font-question" title="" data-original-title="Default menu option will be trigger if no other option is selected or an invalid option is selected."></i>
+      </div>
+    </div>
+    
+    <div class="clear"></div>
+  </header>
+  <div class="menu-action action-conditional_router">
+    <div class="field select">
+      <label for="voice_menu_item_conditional_router_id_1">Smart Router </label>
+      <div class="select2-container conditional_router" id="s2id_voice_menu_item_conditional_router_id_1" style="min-width: 150px; width: 100%; max-width: 400px; display: inline-block;"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-12">Test Router</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen12" class="select2-offscreen">Smart Router </label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-12" id="s2id_autogen12"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen12_search" class="select2-offscreen">Smart Router </label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-12" id="s2id_autogen12_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-12">   </ul></div></div><input type="text" id="voice_menu_item_conditional_router_id_1" class="conditional_router" value="COR1819B95F1F30B8D29D6074F01BE71F04AB03002268585864E1FEDC74B0BEA51A" name="item[conditional_router_id]" style="min-width: 150px; width: 100%; max-width: 400px; display: none;" tabindex="-1" title="Smart Router "> <a target="_blank" href="/conditional_routers/1/edit" class="edit-url">edit</a>
+      <div class="clear-break"></div>
+    </div>
+  </div>
+  <div style="margin:0;border-top:solid 1px #E0E0E0;max-width:100%;padding-top:10px">
+      <div class="col-sm-7">
+        <div class="field" style="margin-bottom:0">
+          <label>Tag this call <i class="font-help" title="" data-original-title="When the caller enters the given keypress, apply this tag to the call in the call log"></i></label>
+          <div class="select2-container select2-container-multi chzn-select tag_call" id="s2id_voice_menu_item_tag_id_1" style="width:100%"><ul class="select2-choices">  <li class="select2-search-field">    <label for="s2id_autogen10" class="select2-offscreen"></label>    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input select2-default" id="s2id_autogen10" placeholder="" style="width: 629px;">  </li></ul><div class="select2-drop select2-drop-multi select2-display-none">   <ul class="select2-results">   </ul></div></div><input class="chzn-select tag_call" id="voice_menu_item_tag_id_1" name="item[tag_id]" size="30" style="width: 100%; display: none;" type="text" value="" tabindex="-1">
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="field" style="margin-bottom:0">
+          <label>Assign agent to call <i class="font-help" title="" data-original-title="When the caller enters the given keypress, assign this call to the selected agent"></i></label>
+          <div class="select2-container agent_assign_id" id="s2id_voice_menu_item_assign_agent_id_1" style="width:100%"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-11">Select an agent</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen11" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-11" id="s2id_autogen11"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen11_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-11" id="s2id_autogen11_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-11">   </ul></div></div><input class="agent_assign_id" id="voice_menu_item_assign_agent_id_1" name="item[assign_agent_id]" size="30" style="width: 100%; display: none;" type="text" value="" tabindex="-1" title="">
+        </div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <footer>
+    <button class="button save-button callout"><div class="indicator-loop"><i class="save"></i></div><span>Save Changes</span></button>
+    <a class="delete-vmi pull-right" href="#remove" data-tag="1" data-vmi="VMI93F974B7707B246712BF010BB9EA0A87D1CCE992DD22C8C82AE8DC455687AD60"><i class="font-trash"></i></a>
+    <div class="clear"></div>
+  </footer>
+</div>
+</div></div>
+        </div>
+        <div class="field" id="menu-numbers">
+          <h3>Numbers <small>choose the tracking numbers to directly dial into this menu</small></h3>
+          <div class="card">
+            <a data-id="VOM93F974B7707B2467359A0DF6B4D339F1C6984DD17109D6A1" class="button" id="assign_numbers" href="#edit-numbers">Edit Assigned Tracking Numbers</a>
+            <p class="assign-count">1 assigned</p>
+          </div>
+        </div>
+</form>
