@@ -189,13 +189,12 @@ function initPaymentRequest(onSuccess, onFailure) {
     ],
   };
 
-  window.request = new PaymentRequest(supportedInstruments, details);
-  var that = this;
+  request = new PaymentRequest(supportedInstruments, details);
   window.setTimeout(function() {
   if (window.request.canMakePayment) {
     window.request.canMakePayment().then(function(result) {
       if (result) {
-        onSuccess(request);
+        onSuccess(window.request);
       } else {
         onFailure('Cannot make payment');
       }
