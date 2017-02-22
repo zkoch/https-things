@@ -138,6 +138,7 @@ limitations under the License.
  * is finished with failure.
  */
 function initPaymentRequest(onSuccess, onFailure) {
+  alert('initing');
   if (!navigator.userAgent.match(/Android/i)) {
     onFailure('Supported only on Android for now.');
     return;
@@ -192,6 +193,7 @@ function initPaymentRequest(onSuccess, onFailure) {
 
   if (request.canMakePayment) {
     request.canMakePayment().then(function(result) {
+      alert('can make payment:" + result);
       if (result) {
         onSuccess(request);
       } else {
@@ -266,19 +268,19 @@ function instrumentToJsonString(instrument) {
  */
 function initBuyButton(buyButton) {
   window.setTimeout(function() {
-  initPaymentRequest(function(request, optionalWarning) {
-    buyButton.setAttribute('style', 'display: inline;');
-    ChromeSamples.setStatus(optionalWarning ? optionalWarning : '');
-    buyButton.addEventListener('click', function handleClick() {
-      buyButton.removeEventListener('click', handleClick);
-      onBuyClicked(request);
-      initBuyButton(buyButton);
+    initPaymentRequest(function(request, optionalWarning) {
+      buyButton.setAttribute('style', 'display: inline;');
+      ChromeSamples.setStatus(optionalWarning ? optionalWarning : '');
+      buyButton.addEventListener('click', function handleClick() {
+        buyButton.removeEventListener('click', handleClick);
+        onBuyClicked(request);
+        initBuyButton(buyButton);
+      });
+    }, function(error) {
+      buyButton.setAttribute('style', 'display: none;');
+      ChromeSamples.setStatus(error);
     });
-  }, function(error) {
-    buyButton.setAttribute('style', 'display: none;');
-    ChromeSamples.setStatus(error);
-  });
-  }, 0);
+  }, 2000);
 }
 
 const buyButton = document.getElementById('buyButton');
