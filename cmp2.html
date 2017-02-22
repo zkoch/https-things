@@ -189,22 +189,22 @@ function initPaymentRequest(onSuccess, onFailure) {
     ],
   };
 
-  let request = new PaymentRequest(supportedInstruments, details);
+  window.request = new PaymentRequest(supportedInstruments, details);
   var that = this;
   window.setTimeout(function() {
-  if (request.canMakePayment) {
-    request.canMakePayment().then(function(result) {
+  if (window.request.canMakePayment) {
+    window.request.canMakePayment().then(function(result) {
       if (result) {
         onSuccess(request);
       } else {
         onFailure('Cannot make payment');
       }
     }).catch(function(err) {
-      onSuccess(request, err);
+      onSuccess(window.request, err);
     });
   } else {
     onSuccess(
-        request, 'This browser does not support "can make payment" query');
+        window.request, 'This browser does not support "can make payment" query');
   }
   }, 0);
 }
