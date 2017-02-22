@@ -192,7 +192,6 @@ function initPaymentRequest(onSuccess, onFailure) {
   let request = new PaymentRequest(supportedInstruments, details);
   var that = this;
   window.setTimeout(function() {
-  this = that;
   if (request.canMakePayment) {
     request.canMakePayment().then(function(result) {
       if (result) {
