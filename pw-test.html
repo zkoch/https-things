@@ -1,4 +1,14 @@
-<head></head>
+<head>
+<script type="text/javascript">
+ document.addEventListener("DOMContentLoaded", function() {
+  var el = document.getElementbyId("password_field");
+  console.log("Value of password field is: " + el.value);
+  el.addEventListener("click", function() {
+   console.log("Click happened. Value of password field is: " + el.value);
+  });
+ });
+</script>
+</head>
 <body>
  <form name="np" id="np1" action="https://example.com/" method="post">
   Name: <input type="text" name="name" id="password_name" autocomplete="username"><br>
